@@ -1,22 +1,15 @@
+function getNombre(){
+    return "Fernando";
+}
+let nombre:string = "Juan";
+let apellido:string = "Perez";
+let edad:number = 32;
+// en los templates literales de ES6 podemos meter código javascript hasta una función;
+let texto = `Hola, soy ${nombre} ${apellido} y tengo ${edad} años`;
 
-let nombre:string;
-let numero:number = 123;
-let booleano:boolean = true;
-let hoy:Date = new Date();
-nombre = "Peter";
-hoy = new Date('2020-10-21');
-console.log(hoy);
-let cualquiera:any;
-// puede recibir nombres, booleanos, number
+let texto2:string = `${1+2}`;
+let texto3:string = `${getNombre()}`;
 
-let spiderman = {
-    nombre: "Peter",
-    edad: 20
-};
-// si añadimos otra propiedad al objeto no los indica mal
-
-spiderman = {
-    nombre: "Juan",
-    edad: 30,
-    //poder = "Pepito"
-};
+console.log(texto);
+console.log(texto2);
+console.log(texto3);
