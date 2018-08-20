@@ -1,22 +1,22 @@
-//promesas
+//interfaces de Typescript
 
-let prom1 = new Promise(function (resolve:any, reject:any)  {
-    setTimeout(()=>{
-        console.log("Promesa terminada");
-        // termina bien
-        resolve();
+interface Xmen {
+    nombre:string,
+    poder:string
+}
 
-        // termina mal
-         //reject();
-    }, 1500);
-});
-console.log("Paso 1");
-prom1.then(function () {
-    console.log("Ejecutame cuando se termine bien");
-},
-    function () {
-        console.error("Ejecutar si todo sale mal");
-    }
-);
+function enviarMision(xmen: Xmen) {
+    console.log("Enviando a: "+xmen.nombre);
+}
 
-console.log("Paso 2");
+function enviarCuartel (xmen: Xmen) {
+    console.log("Enviando al cuartel: "+xmen.nombre);
+}
+
+let wolverine:Xmen = {
+    nombre: "wolverine",
+    poder: "Regeneración"
+};
+
+enviarMision(wolverine);
+enviarCuartel(wolverine);
