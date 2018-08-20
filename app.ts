@@ -1,12 +1,14 @@
-// hacemos funcion flecha y nos saldrá el nombre que queremos Hulk
-let hulk = {
-    nombre: "Hulk",
-    smash(){
-        setTimeout(() => {
-            console.log(this.nombre + " smash!!");
-        }, 1500);
-
-    }
+let avenger = {
+    nombre: "Steve",
+    clave: "Capitán America",
+    poder: "Escudo"
 };
 
-hulk.smash();
+// Derstructuracion
+let { nombre, clave, poder } =avenger;
+
+//let nombre = avenger.nombre;
+//let clave = avenger.clave;
+//let poder = avenger.poder;
+
+console.log(nombre, clave, poder);
