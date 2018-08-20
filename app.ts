@@ -1,7 +1,22 @@
+//promesas
 
-//Destructuracion de Arreglos va por posiciones
-let avegers:string[] = ["Thor", "Steve", "Viuda Negra"];
+let prom1 = new Promise(function (resolve:any, reject:any)  {
+    setTimeout(()=>{
+        console.log("Promesa terminada");
+        // termina bien
+        resolve();
 
-let [thor, capi, viuda] = avegers;
+        // termina mal
+         //reject();
+    }, 1500);
+});
+console.log("Paso 1");
+prom1.then(function () {
+    console.log("Ejecutame cuando se termine bien");
+},
+    function () {
+        console.error("Ejecutar si todo sale mal");
+    }
+);
 
-console.log(thor, capi, viuda);
+console.log("Paso 2");
