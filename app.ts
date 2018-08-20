@@ -1,14 +1,7 @@
-let avenger = {
-    nombre: "Steve",
-    clave: "Capitán America",
-    poder: "Escudo"
-};
 
-// Derstructuracion
-let { nombre, clave, poder } =avenger;
+//Destructuracion de Arreglos va por posiciones
+let avegers:string[] = ["Thor", "Steve", "Viuda Negra"];
 
-//let nombre = avenger.nombre;
-//let clave = avenger.clave;
-//let poder = avenger.poder;
+let [thor, capi, viuda] = avegers;
 
-console.log(nombre, clave, poder);
+console.log(thor, capi, viuda);
