@@ -1,15 +1,12 @@
-function getNombre(){
-    return "Fernando";
+//funcion con 3 parametros , 1 obligatorio, 2 por defecto, y 3 opcional
+function activar(quien:string, objeto:string="función", momento?:string) {
+    let mensaje:string;
+    if(momento){
+        mensaje = `${quien} activó la ${objeto} en el ${momento}`;
+    }else{
+        mensaje = `${quien} activó la ${objeto}`;
+    }
+    console.log(mensaje);
 }
-let nombre:string = "Juan";
-let apellido:string = "Perez";
-let edad:number = 32;
-// en los templates literales de ES6 podemos meter código javascript hasta una función;
-let texto = `Hola, soy ${nombre} ${apellido} y tengo ${edad} años`;
 
-let texto2:string = `${1+2}`;
-let texto3:string = `${getNombre()}`;
-
-console.log(texto);
-console.log(texto2);
-console.log(texto3);
+activar("Peter", "", "Madrid");
