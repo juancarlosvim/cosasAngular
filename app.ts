@@ -1,9 +1,8 @@
-// en esta funcion nos saldrá undefined porque el this coge el de manera global si ponemos let nombre = pedro en el superior nos indicara que el nombre es pedro
-//let nombre = "pedro";
+// hacemos funcion flecha y nos saldrá el nombre que queremos Hulk
 let hulk = {
     nombre: "Hulk",
     smash(){
-        setTimeout(function () {
+        setTimeout(() => {
             console.log(this.nombre + " smash!!");
         }, 1500);
 
