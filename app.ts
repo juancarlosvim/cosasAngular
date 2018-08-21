@@ -1,22 +1,17 @@
-//interfaces de Typescript
+class Avenger {
+    nombre:string;
+    equipo:string;
+    nombreReal:string;
+    puedePelear:boolean = false;
+    peleasGanadas:number = 0;
 
-interface Xmen {
-    nombre:string,
-    poder:string
+    constructor(nombre:string, equipo:string, nombreReal:string){
+       this.nombre = nombre;
+       this.equipo = equipo;
+       this.nombreReal = nombreReal;
+    }
 }
 
-function enviarMision(xmen: Xmen) {
-    console.log("Enviando a: "+xmen.nombre);
-}
+let antMan:Avenger = new Avenger('Antman','cap','Scott Lang');
 
-function enviarCuartel (xmen: Xmen) {
-    console.log("Enviando al cuartel: "+xmen.nombre);
-}
-
-let wolverine:Xmen = {
-    nombre: "wolverine",
-    poder: "Regeneración"
-};
-
-enviarMision(wolverine);
-enviarCuartel(wolverine);
+console.log(antMan);
