@@ -1,1 +1,1 @@
-# cosasAngular
+# repasoTypescript
